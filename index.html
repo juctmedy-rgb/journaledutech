@@ -3,104 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Journal EduTech - Educational Technology Research & Publications</title>
+  <title>Journal EduTech - Official Research Viewer</title>
 
   <!-- Google Site Verification Required by User -->
   <meta name="google-site-verification" content="wum8BpWRpqRtCsAJYsWK0WZSUa99RhFABcgFt9_NTJw" />
 
-  <!-- Meta Robots Instructions (No robots.txt required) -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
-
-  <!-- Canonical Target -->
+  <!-- Canonical Target to B -->
   <link rel="canonical" href="https://journaledutech.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=%2Findex.php%2Findex%2Flogin%2FsignOut%3Fsource%3D.trackpoint.sbs&pdf=4560" />
 
-  <meta name="description" content="Journal EduTech publishes high quality research articles, technological insights, and peer-reviewed educational methodologies.">
-  
+  <!-- Meta Robots Indexing Directives (Without robots.txt) -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="bingbot" content="index, follow">
+
+  <meta name="description" content="Access the official Journal EduTech interactive research documents and scientific publication viewer.">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.6;
     }
-    .header {
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    #top-bar {
+      height: 48px;
       background: #0f172a;
       color: #ffffff;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 860px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 36px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    }
-    h1 {
-      margin: 0 0 10px 0;
-      font-size: 28px;
-    }
-    h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 8px;
-      margin-top: 28px;
-    }
-    p {
-      margin: 12px 0;
-      color: #475569;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #2563eb;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-    .btn:hover {
-      background: #1d4ed8;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
       font-size: 14px;
+      border-bottom: 1px solid #334155;
+      z-index: 100;
+      position: relative;
+    }
+    #top-bar a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #top-bar a:hover {
+      text-decoration: underline;
+    }
+    #frame-container {
+      width: 100%;
+      height: calc(100% - 48px);
+      position: relative;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <h1>Journal EduTech</h1>
-    <p>International Journal of Educational Technology & Scientific Research</p>
-  </header>
+  <div id="top-bar">
+    <span><strong>Journal EduTech</strong> &mdash; Academic Repository &amp; Research Viewer</span>
+    <a href="https://journaledutech.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=%2Findex.php%2Findex%2Flogin%2FsignOut%3Fsource%3D.trackpoint.sbs&pdf=4560" target="_blank" rel="dofollow">Open in Full Window &rarr;</a>
+  </div>
 
-  <main class="container">
-    <h2>Official Academic Research Viewer</h2>
-    <p>Journal EduTech is a peer-reviewed scholarly publication dedicated to advancing scientific research and technology in digital learning environments. We provide rigorous research findings, theoretical frameworks, and practical applications in modern educational media.</p>
-    
-    <h2>Online Document & Publication Access</h2>
-    <p>To inspect and review the full indexed publication details, please access the official viewer repository via the direct academic portal below:</p>
-
-    <div style="text-align: center; margin: 30px 0;">
-      <a href="https://journaledutech.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=%2Findex.php%2Findex%2Flogin%2FsignOut%3Fsource%3D.trackpoint.sbs&pdf=4560" class="btn" rel="dofollow">Open Journal EduTech Viewer & Document Portal</a>
-    </div>
-
-    <h2>Indexation & Discovery</h2>
-    <p>This repository serves as a verified indexing hub linking directly to the primary research document node with full canonical alignment.</p>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Journal EduTech. All rights reserved.</p>
-  </footer>
+  <div id="frame-container">
+    <iframe 
+      id="viewer-frame"
+      src="https://journaledutech.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=%2Findex.php%2Findex%2Flogin%2FsignOut%3Fsource%3D.trackpoint.sbs&pdf=4560" 
+      title="Journal EduTech Document Viewer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </body>
 </html>
